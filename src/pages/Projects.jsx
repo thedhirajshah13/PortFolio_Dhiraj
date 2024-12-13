@@ -2,12 +2,13 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "../components/Projects/ProjectCard";
 import Particle from "../components/Particle";
-import blog from "../assets/projects/Blog.png";
+import blog from "../assets/projects/Echo_Voice.png";
 import MovieRecomendation from "../assets/projects/Movie_Recomendation.png";
 import ECommerce from "../assets/projects/E-Commerce.png";
-import Tindog from "../assets/projects/Tindog.png";
+
 import MyNote from "../assets/projects/My_Note.png";
 import Book from "../assets/projects/Book_Manager.png";
+import ChatFussion from "../assets/projects/ChatFussion.png";
 const Projects = () => {
   return (
     <Container fluid className="project-section">
@@ -20,6 +21,29 @@ const Projects = () => {
           Here are a few projects I've worked on recently.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={ChatFussion}
+              isBlog={false}
+              title="ChatFussion"
+              description="ChatFussion is a dynamic full-stack chat application designed to facilitate real-time communication with cutting-edge technology. It features secure user authentication using JWT, ensuring private and reliable access to chat functionalities. Powered by Socket.IO, it delivers seamless real-time messaging, enabling users to send and receive messages instantly. The application integrates serverless authentication for enhanced security and scalable session management.
+
+Technologies Used: React.js for the user interface, Node.js and Express.js for the backend, Socket.IO for real-time communication, MongoDB for database management, and JSON Web Token (JWT) for secure authentication. ChatFussion is the perfect solution for modern communication needs, offering reliability, security, and a user-friendly experience."
+              ghLink="https://github.com/thedhirajshah13/ChatFussion"
+              // demoLink="https://steady-eclair-2b89b9.netlify.app"
+            />
+          </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={blog}
+              isBlog={false}
+              title="Blog Website"
+              description="Echoes of Expression is a personal blog platform that allows users to share insights, stories, and reflections on diverse topics such as lifestyle, technology, and personal development. Designed with the MERN stack, this application features RESTful APIs for seamless content management, offering dynamic interactions with the database for an intuitive and interactive user experience.
+
+Technologies Used: MongoDB for the database, Express.js for backend routing, React for the front-end interface, and Node.js for the server-side logic. Echoes of Expression is a perfect space for bloggers and writers to express their thoughts, fostering a vibrant community for content creation and engagement."
+              ghLink="https://github.com/thedhirajshah13"
+            />
+          </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={ECommerce}
@@ -55,27 +79,6 @@ const Projects = () => {
 
           <Col md={4} className="project-card">
             <ProjectCard
-              imgPath={blog}
-              isBlog={false}
-              title="Blog Website"
-              description="Developed a full-stack blog web application using Node.js, Express.js, MongoDB, and EJS. The application features user authentication, CRUD operations for posts, and dynamic EJS templates for a responsive and interactive user interface. Utilized MongoDB for efficient data management and implemented robust routing with Express.js to handle server-side logic"
-              ghLink="https://github.com/thedhirajshah13"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Tindog}
-              isBlog={false}
-              title="Tindog"
-              description="Developed a compactly designed website using HTML and CSS, focusing on minimalist aesthetics and efficient layout for a streamlined user experience."
-              ghLink="https://github.com/thedhirajshah13/tindog"
-              demoLink="https://majestic-moxie-75587f.netlify.app/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
               imgPath={Book}
               isBlog={false}
               title="BooK Manager"
@@ -86,7 +89,7 @@ const Projects = () => {
         </Row>
       </Container>
     </Container>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;
