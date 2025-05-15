@@ -7,10 +7,10 @@ const Type = () => {
           options={{
             strings: [
               "MERN Stack Developer",
-              "Machine Learning Enthusiast",
+              "C++ Developer",
               
               "Effective Problem Solver",
-              "Solve More than 100 problems on Leetcode"
+              "Data Structure & Algorithm"
             ],
             autoStart: true,
             loop: true,

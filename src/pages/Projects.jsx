@@ -51,7 +51,7 @@ Technologies Used: MongoDB for the database, Express.js for backend routing, Rea
               title="E-coomerce"
               description="Developed a comprehensive e-commerce website using React.js, featuring user authentication with login and logout functionalities integrated via Dummy JSON API. The application includes protected routes to ensure secure access. Product data is dynamically fetched from the same API, allowing users to add and remove items from their cart, apply filters, and proceed through a seamless checkout process. The site is optimized for performance and designed to be responsive, ensuring compatibility across various devices. Additionally, state management is efficiently handled, and the interface is built using Material-UI components for a modern and user-friendly experience."
               ghLink="https://github.com/thedhirajshah13/Stop_Go_Mart"
-              demoLink="https://steady-eclair-2b89b9.netlify.app"
+              demoLink="https://shop-circle.netlify.app"
             />
           </Col>
 
