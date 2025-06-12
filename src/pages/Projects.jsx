@@ -7,7 +7,7 @@ import MovieRecomendation from "../assets/projects/Movie_Recomendation.png";
 import ECommerce from "../assets/projects/E-Commerce.png";
 
 import MyNote from "../assets/projects/My_Note.png";
-import Book from "../assets/projects/Book_Manager.png";
+import Gym from "../assets/projects/Gym.png";
 import ChatFussion from "../assets/projects/ChatFussion.png";
 const Projects = () => {
   return (
@@ -54,6 +54,16 @@ Technologies Used: MongoDB for the database, Express.js for backend routing, Rea
               demoLink="https://shop-circle.netlify.app"
             />
           </Col>
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath={Gym}
+              isBlog={false}
+              title="Gold Gym"
+              description="This gym application is built using React and Material UI, integrating data from ExerciseDB and YouTube Search via RapidAPI. It supports over 1,300 exercises categorized by body part, equipment, and target muscle. YouTube API dynamically fetches 5+ video tutorials per exercise, enhancing user learning. The app boasts a 95% mobile responsiveness score, <200ms API latency, and is compatible with all major browsers (Chrome, Firefox, Edge, Safari). Optimized using lazy loading and debounce input handling, it delivers smooth performance with load times under 1.5s on average. Designed for scalability, the UI ensures seamless user interaction and accessibility."
+              ghLink="https://github.com/thedhirajshah13/Gold_Gym"
+              demoLink="https://golg-gym.netlify.app"
+            />
+          </Col>
 
           <Col md={4} className="project-card">
             <ProjectCard
@@ -77,15 +87,7 @@ Technologies Used: MongoDB for the database, Express.js for backend routing, Rea
             />
           </Col>
 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={Book}
-              isBlog={false}
-              title="BooK Manager"
-              description="Developed a full-stack library management system using Node.js, Express.js, MongoDB, and EJS. Implemented functionalities such as book and member management with CRUD operations, transaction handling, and robust data storage using MongoDB. Designed dynamic and responsive views using EJS templates, ensuring seamless user interaction and efficient library administration."
-              ghLink="https://github.com/thedhirajshah13"
-            />
-          </Col>
+          
         </Row>
       </Container>
     </Container>
