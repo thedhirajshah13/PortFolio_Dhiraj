@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Row } from "react-bootstrap";
-import { DiJavascript1, DiReact, DiNodejs, DiGit } from "react-icons/di";
+import { DiJavascript1, DiReact, DiNodejs } from "react-icons/di";
 import { FaHtml5, FaGithub, FaCss3Alt } from "react-icons/fa";
 
 import { SiMongodb, SiExpress, SiCplusplus, SiMysql } from "react-icons/si";
