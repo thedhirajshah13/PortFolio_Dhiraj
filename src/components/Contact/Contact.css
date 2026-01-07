@@ -44,12 +44,18 @@
     box-shadow: 0 0 9px #7500fa;
 }
 
-input{
-    background-color: var(--purple)
+input, .c-right .user{
+    background-color: rgba(255,255,255,0.03);
+    color: whitesmoke;
+}
+input:focus, .c-right .user:focus, textarea:focus{
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 12px rgba(122,43,255,0.14) !important;
 }
 textarea{
     height: 5rem!important;
-    background-color: var(--purple)
+    background-color: rgba(255,255,255,0.03);
+    color: whitesmoke;
 }
 
 .done{
@@ -66,15 +72,35 @@ textarea{
     left: 8rem;
 }
 
+@media screen and (max-width: 768px) {
+    .contact-form{
+        padding: 0 1rem;
+        flex-direction: column;
+        gap: 3rem;
+        height: auto;
+        margin-top: 2rem;
+    }
+    .c-right .user{
+        width: 100%;
+        max-width: 18rem;
+    }
+    .c-left{
+        padding-top: 1rem !important;
+    }
+}
+
 @media screen and (max-width: 480px) {
     .contact-form{
         padding: 0;
         flex-direction: column;
-        gap: 5rem;
-        height: 40rem;
+        gap: 2rem;
+        height: auto;
     }
     .c-right .user{
-        width: 16rem;
+        width: 100%;
+        max-width: 16rem;
     }
-
+    .c-left h1{
+        font-size: 1.5em !important;
+    }
 }
