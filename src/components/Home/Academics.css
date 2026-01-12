@@ -1,0 +1,115 @@
+.academics-section {
+  position: relative;
+  padding-top: 150px;
+  padding-bottom: 30px;
+  background-image: linear-gradient(to bottom left, rgba(5, 8, 40, 0.4), rgba(1, 4, 39, 0.6));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.academics-subtitle {
+  font-size: 2.3em;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  text-align: center;
+  color: white;
+  font-weight: 600;
+}
+
+.academics-content {
+  margin-top: 30px;
+}
+
+.academic-card {
+  background-color: rgba(18, 10, 30, 0.6);
+  border-left: 4px solid #7a2bff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.academic-card:hover {
+  background: rgba(122, 43, 255, 0.1);
+  border-left: 4px solid #9f6bff;
+  transform: translateX(10px);
+  box-shadow: 4px 5px 12px rgba(122, 43, 255, 0.25);
+}
+
+.academic-card-header {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.academic-icon {
+  font-size: 1.8em;
+  color: #9f6bff;
+  min-width: 40px;
+  margin-top: 5px;
+}
+
+.experience-badge {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #7a2bff 0%, #9f6bff 100%);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 1.2em;
+  min-width: 40px;
+  margin-top: 5px;
+  box-shadow: 4px 5px 12px rgba(122, 43, 255, 0.25);
+}
+
+.academic-card h4 {
+  color: white;
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+
+.academic-institution {
+  color: #9f6bff;
+  font-size: 0.95em;
+  margin-bottom: 8px;
+}
+
+.experience-details {
+  color: #bdb6c9;
+  font-size: 0.9em;
+  margin: 0;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .academics-section {
+    padding-top: 70px;
+    padding-bottom: 30px;
+  }
+
+  .academics-subtitle {
+    font-size: 1.8em;
+    margin-top: 20px;
+  }
+
+  .academic-card {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .academic-icon {
+    font-size: 1.5em;
+  }
+
+  .academic-card-header {
+    gap: 10px;
+  }
+
+  .academic-card h4 {
+    font-size: 0.95em;
+  }
+}
