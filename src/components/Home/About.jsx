@@ -1,14 +1,14 @@
-import React from "react";
+
 import { Container, Row, Col } from "react-bootstrap";
 import LaptopImg from "../../assets/home-main.svg";
 import Tilt from "react-parallax-tilt";
-import {
-  AiFillGithub,
+// import {
+//   AiFillGithub,
   
-} from "react-icons/ai";
-import { FaLinkedinIn } from "react-icons/fa";
-import { SiLeetcode } from "react-icons/si";
-import { FaInstagram } from "react-icons/fa";
+// } from "react-icons/ai";
+// import { FaLinkedinIn } from "react-icons/fa";
+// import { SiLeetcode } from "react-icons/si";
+// import { FaInstagram } from "react-icons/fa";
 
 
 
@@ -70,8 +70,8 @@ const About = () => {
                 </Tilt>
               </Col>
             </Row>
-            <Row>
-              <Col md={12} className="home-about-social">
+            {/* <Row> */}
+              {/* <Col md={12} className="home-about-social">
                 <h1>FIND ME ON</h1>
                 <p>
                 Feel free to contact and <span className="yellow">connect.</span> with me. 
@@ -122,8 +122,8 @@ const About = () => {
                     </a>
                   </li>
                 </ul>
-              </Col>
-            </Row>
+              </Col> */}
+            {/* </Row> */}
           </Container>
         </Container>
       );
