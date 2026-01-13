@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { FaBook, FaGraduationCap, FaBookOpen } from "react-icons/fa";
+import { FaBook, FaGraduationCap } from "react-icons/fa";
 import "./Academics.css";
 
 const Academics = () => {
