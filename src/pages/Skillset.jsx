@@ -1,33 +1,39 @@
 import React from "react";
 import { Container } from "react-bootstrap";
-
-import Particle from '../components/Particle'
-import Techstack from "../components/Skillset/Techstack";
+import Particle from '../components/Particle';
+import OrganizedTechstack from "../components/Skillset/OrganizedTechstack";
 import Toolstack from "../components/Skillset/Toolstack";
 import Leetcode from "../components/Skillset/Leetcode";
 import Github from "../components/Skillset/Github";
 
 const Skillset = () => {
   return (
-    <Container fluid className="about-section">
+    <Container fluid className="about-section" id="skills">
       <Particle />
       <Container>
-        <h1 className="project-heading">
-          Professional <strong className="yellow">Skillset </strong>
-        </h1>
+        <div className="text-center mb-4">
+          <h2 className="section-title">
+            Technical <span className="yellow">Skillset &amp; Architecture</span>
+          </h2>
+          <p className="section-subtitle">
+            Categorized core competencies, frameworks, systems, and cloud infrastructure
+          </p>
+        </div>
 
-        <Techstack />
+        <OrganizedTechstack />
 
-        <h1 className="project-heading">
-          <strong className="yellow">Tools</strong> I use
-        </h1>
-        <Toolstack />
+        <div className="mt-5 text-center">
+          <h3 className="section-title fs-3 mb-4">
+            Development <span className="yellow">Tools</span>
+          </h3>
+          <Toolstack />
+        </div>
 
         <Leetcode />
         <Github />
       </Container>
     </Container>
-  )
-}
+  );
+};
 
-export default Skillset
+export default Skillset;

@@ -8,41 +8,75 @@ function Particle() {
       params={{
         particles: {
           number: {
-            value: 160,
+            value: 70,
             density: {
               enable: true,
-              value_area: 1500,
+              value_area: 900,
             },
           },
-          line_linked: {
-            enable: false,
-            opacity: 0.03,
+          color: {
+            value: ["#00f2fe", "#7928ca", "#38bdf8", "#818cf8"],
           },
-          move: {
-            direction: "right",
-            speed: 0.05,
-          },
-          size: {
-            value: 1,
+          shape: {
+            type: "circle",
           },
           opacity: {
+            value: 0.35,
+            random: true,
             anim: {
               enable: true,
               speed: 1,
-              opacity_min: 0.05,
+              opacity_min: 0.08,
+              sync: false,
             },
+          },
+          size: {
+            value: 3,
+            random: true,
+            anim: {
+              enable: true,
+              speed: 2,
+              size_min: 0.5,
+              sync: false,
+            },
+          },
+          line_linked: {
+            enable: true,
+            distance: 130,
+            color: "#38bdf8",
+            opacity: 0.12,
+            width: 1,
+          },
+          move: {
+            enable: true,
+            speed: 0.8,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
           },
         },
         interactivity: {
           events: {
+            onhover: {
+              enable: true,
+              mode: "grab",
+            },
             onclick: {
               enable: true,
               mode: "push",
             },
           },
           modes: {
+            grab: {
+              distance: 140,
+              line_linked: {
+                opacity: 0.4,
+              },
+            },
             push: {
-              particles_nb: 1,
+              particles_nb: 2,
             },
           },
         },

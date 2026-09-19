@@ -1,3 +1,29 @@
 # https://www.robotstxt.org/robotstxt.html
 User-agent: *
+Allow: /
 Disallow:
+
+# AI Search Engine Crawlers (GEO / AGM Optimization)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: AnthropicBot
+Allow: /
+
+User-agent: ByteSpider
+Allow: /
+
+# XML Sitemap
+Sitemap: https://thedhirajshah13.netlify.app/sitemap.xml

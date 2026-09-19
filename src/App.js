@@ -6,16 +6,16 @@ import {
   Navigate
 } from "react-router-dom";
 
-import Home from './pages/Home'
-import Skill from './pages/Skillset'
-import Project from './pages/Projects'
-import Resume from './pages/Resume'
-import Contact from './pages/Contact'
+import Home from './pages/Home';
+import Skill from './pages/Skillset';
+import Project from './pages/Projects';
+import Resume from './pages/Resume';
+import Contact from './pages/Contact';
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
-import Preloader from "./components/PreLoader"
-import ScrollToTop from "./components/ScrollToTop"
+import Preloader from "./components/PreLoader";
+import ScrollToTop from "./components/ScrollToTop";
 
 import "./App.css";
 import "./style.css";
@@ -36,6 +36,11 @@ function App() {
     <Router>
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
+        {/* Animated background ambient glow spheres */}
+        <div className="bg-ambient-orb orb-cyan"></div>
+        <div className="bg-ambient-orb orb-violet"></div>
+        <div className="bg-ambient-orb orb-blue"></div>
+
         <Navbar />
         <ScrollToTop />
         <Routes>

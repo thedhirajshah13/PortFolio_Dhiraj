@@ -2,21 +2,24 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 import logo from "../../assets/dLogo.png";
-
-import { Link } from "react-router-dom";
+import pdf from "../../assets/Dhiraj_Shah_Software_Developer_Resume.pdf";
+import { Link, useLocation } from "react-router-dom";
 
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineContacts,
+  AiOutlineDownload,
 } from "react-icons/ai";
+import { FaBriefcase } from "react-icons/fa";
 import { GiSkills } from "react-icons/gi";
-import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const location = useLocation();
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -28,6 +31,17 @@ function NavBar() {
 
   window.addEventListener("scroll", scrollHandler);
 
+  const scrollToSection = (id) => {
+    updateExpanded(false);
+    if (location.pathname !== "/") {
+      return;
+    }
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <Navbar
       expanded={expand}
@@ -36,8 +50,9 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex">
+        <Navbar.Brand href="/" className="d-flex align-items-center gap-2">
           <img src={logo} className="img-fluid logo" alt="brand" />
+          <span className="brand-name d-none d-sm-inline">Dhiraj Shah</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -50,9 +65,16 @@ function NavBar() {
           <span></span>
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="ms-auto" defaultActiveKey="#home">
+          <Nav className="ms-auto align-items-md-center" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
+              <Nav.Link 
+                as={Link} 
+                to="/" 
+                onClick={() => {
+                  updateExpanded(false);
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+              >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>
             </Nav.Item>
@@ -60,10 +82,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/skillset"
-                onClick={() => updateExpanded(false)}
+                to="/"
+                onClick={() => scrollToSection("experience")}
               >
-                <GiSkills style={{ marginBottom: "2px" }} /> Skills
+                <FaBriefcase style={{ marginBottom: "2px" }} /> Experience
               </Nav.Link>
             </Nav.Item>
 
@@ -83,10 +105,10 @@ function NavBar() {
             <Nav.Item>
               <Nav.Link
                 as={Link}
-                to="/resume"
+                to="/skillset"
                 onClick={() => updateExpanded(false)}
               >
-                <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
+                <GiSkills style={{ marginBottom: "2px" }} /> Skills
               </Nav.Link>
             </Nav.Item>
 
@@ -96,8 +118,20 @@ function NavBar() {
                 to="/contact"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact Me
+                <AiOutlineContacts style={{ marginBottom: "2px" }} /> Contact
               </Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item className="ms-md-2 mt-2 mt-md-0">
+              <Button
+                href={pdf}
+                target="_blank"
+                rel="noreferrer"
+                className="btn-resume-nav d-flex align-items-center gap-1"
+                size="sm"
+              >
+                <AiOutlineDownload /> Resume ↓
+              </Button>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>
