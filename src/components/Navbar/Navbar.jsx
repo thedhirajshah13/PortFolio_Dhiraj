@@ -3,7 +3,6 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/Button";
-import logo from "../../assets/dLogo.png";
 import pdf from "../../assets/Dhiraj_Shah_Software_Developer_Resume.pdf";
 import { Link, useLocation } from "react-router-dom";
 
@@ -50,9 +49,8 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand href="/" className="d-flex align-items-center gap-2">
-          <img src={logo} className="img-fluid logo" alt="brand" />
-          <span className="brand-name d-none d-sm-inline">Dhiraj Shah</span>
+        <Navbar.Brand href="/" className="d-flex align-items-center">
+          <span className="brand-name">Dhiraj Shah</span>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
