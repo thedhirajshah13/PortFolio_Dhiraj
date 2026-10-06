@@ -6,6 +6,7 @@ import Particle from "../components/Particle";
 import blog from "../assets/projects/blog.png";
 import shop from "../assets/projects/shop.png";
 import Gym from "../assets/projects/gym.png";
+import SEO from "../components/SEO";
 
 const Projects = () => {
   const secondaryProjects = [
@@ -37,6 +38,12 @@ const Projects = () => {
 
   return (
     <Container fluid className="project-section" id="projects">
+      <SEO
+        title="Featured & Production Projects | Dhiraj Shah"
+        description="Explore production web applications built by Dhiraj Shah, including ChatFussion (real-time chat with Speech-to-Text), Echo's of Voice blogging platform, Shop Circle e-commerce, and Gold's Gym."
+        keywords="Dhiraj Shah Projects, ChatFussion, Echo's of Voice, Shop Circle, Full Stack Portfolio Projects, React, Node.js, MongoDB, Socket.io"
+        canonicalPath="/project"
+      />
       <Particle />
       <Container>
         <div className="text-center mb-4">

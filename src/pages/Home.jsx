@@ -15,6 +15,8 @@ import blog from "../assets/projects/blog.png";
 import shop from "../assets/projects/shop.png";
 import Gym from "../assets/projects/gym.png";
 
+import SEO from '../components/SEO';
+
 const Home = () => {
   const secondaryProjects = [
     {
@@ -45,6 +47,12 @@ const Home = () => {
 
   return (
     <main>
+      <SEO
+        title="Dhiraj Shah | Full Stack Developer & Backend Engineer"
+        description="Dhiraj Shah is a Full Stack Developer with 8+ Months Professional Experience specializing in React, Node.js, Express, MongoDB, Redis & AWS. Building scalable web apps, web automation, and NLP pipelines in Delhi, India."
+        keywords="Dhiraj Shah, Full Stack Developer, Software Engineer, MERN Stack Developer, Node.js Engineer, React Developer, Redis, BullMQ, AWS, Python, Web Scraping, NLP, ChatFussion, Delhi India"
+        canonicalPath="/"
+      />
       {/* 1. Hero Section */}
       <Hero />
 
