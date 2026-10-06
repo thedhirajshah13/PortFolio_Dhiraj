@@ -26,4 +26,4 @@ User-agent: ByteSpider
 Allow: /
 
 # XML Sitemap
-Sitemap: https://thedhirajshah13.netlify.app/sitemap.xml
+Sitemap: https://dhirajshah.in/sitemap.xml

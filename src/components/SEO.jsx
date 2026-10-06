@@ -5,7 +5,7 @@ const SEO = ({ title, description, keywords, canonicalPath }) => {
   const location = useLocation();
 
   useEffect(() => {
-    const siteUrl = "https://thedhirajshah13.netlify.app";
+    const siteUrl = "https://dhirajshah.in";
     const currentPath = canonicalPath || location.pathname;
     const fullUrl = `${siteUrl}${currentPath === '/' ? '' : currentPath}`;
 
