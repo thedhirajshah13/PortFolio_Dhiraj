@@ -23,13 +23,23 @@ const Resume = () => {
     <div>
       <SEO
         title="Resume & Professional Experience | Dhiraj Shah"
-        description="Official Software Developer Resume of Dhiraj Shah. Review experience at Mployee.me & Admire Softech, production project architecture, skills, and download resume PDF."
+        description="Official Software Developer Resume of Dhiraj Shah. Full Stack Developer specializing in React, Node.js, Express, MongoDB, Redis, BullMQ & AWS. View and download resume."
         keywords="Dhiraj Shah Resume, Software Engineer CV, Full Stack Developer Resume, Backend Engineer Resume Delhi India"
         canonicalPath="/resume"
       />
       <Container fluid className="resume-section">
         <Particle />
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+
+        <div className="text-center mb-4">
+          <h1 className="section-title">
+            Professional <span className="yellow">Resume</span>
+          </h1>
+          <p className="section-subtitle">
+            Dhiraj Shah — Full Stack Developer &amp; Backend Engineer (Delhi, India)
+          </p>
+        </div>
+
+        <Row style={{ justifyContent: "center", position: "relative", marginBottom: "20px" }}>
           <Button
             variant="primary"
             href={pdf}
@@ -37,7 +47,7 @@ const Resume = () => {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download Resume
+            &nbsp;Download Resume (PDF)
           </Button>
         </Row>
 
@@ -47,7 +57,7 @@ const Resume = () => {
           </Document>
         </Row>
 
-        <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Row style={{ justifyContent: "center", position: "relative", marginTop: "20px" }}>
           <Button
             variant="primary"
             href={pdf}
@@ -55,7 +65,7 @@ const Resume = () => {
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
-            &nbsp;Download Resume
+            &nbsp;Download Resume (PDF)
           </Button>
         </Row>
       </Container>
